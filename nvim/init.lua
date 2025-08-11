@@ -64,9 +64,8 @@ vim.cmd("Plug 'hrsh7th/cmp-cmdline'")
 vim.cmd("Plug 'hrsh7th/nvim-cmp'")
 vim.cmd("Plug 'hrsh7th/cmp-vsnip'")
 vim.cmd("Plug 'hrsh7th/vim-vsnip'")
-vim.cmd("Plug 'ellisonleao/gruvbox.nvim'")
 vim.cmd("Plug 'nvim-lua/plenary.nvim'")
-vim.cmd("Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }")
+vim.cmd("Plug 'nvim-telescope/telescope.nvim'")
 vim.cmd('call plug#end()')
 
 -- Telescope keymaps
@@ -76,7 +75,8 @@ vim.keymap.set('n', '<Leader>fb', ':Telescope buffers<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>lf', ':Telescope lsp_references<cr>', { silent = true })
 
 -- Color
-vim.cmd.colorscheme('gruvbox')
+vim.cmd.set('background=dark')
+vim.cmd.colorscheme('desert')
 
 -- Vsnip
 vim.cmd("imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'")
