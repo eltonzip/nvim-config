@@ -77,7 +77,7 @@ vim.cmd('call plug#end()')
 vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>fg', ':Telescope live_grep<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>fb', ':Telescope buffers<cr>', { silent = true })
-vim.keymap.set('n', '<Leader>lf', ':Telescope lsp_references<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>lf', function() require('telescope.builtin').lsp_references({ include_current_line = true }) end, { silent = true })
 vim.keymap.set('n', '<Leader>li', ':Telescope lsp_implementations<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>ls', ':Telescope lsp_dynamic_workspace_symbols<cr>', { silent = true })
 
