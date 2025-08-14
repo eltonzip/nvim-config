@@ -78,6 +78,8 @@ vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<cr>', { silent = true }
 vim.keymap.set('n', '<Leader>fg', ':Telescope live_grep<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>fb', ':Telescope buffers<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>lf', ':Telescope lsp_references<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>li', ':Telescope lsp_implementations<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>ls', ':Telescope lsp_dynamic_workspace_symbols<cr>', { silent = true })
 
 -- Color
 vim.cmd.set('background=dark')
