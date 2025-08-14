@@ -35,6 +35,11 @@ vim.keymap.set('n', '<Leader>kr', ':set keymap=russian-jcukenwin<cr>')
 vim.keymap.set('n', '<Leader>le', ':lua vim.diagnostic.open_float()<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>lr', ':lua vim.lsp.buf.rename()<cr>')
 
+vim.keymap.set('n', '<Leader>bB', 'f(r{f)r}')
+vim.keymap.set('n', '<Leader>Bb', 'f{r(f}r)')
+vim.keymap.set('n', '<Leader>qQ', 'f\'r"f\'r"')
+vim.keymap.set('n', '<Leader>Qq', 'f"r\'f"r\'')
+
 -- LSP
 vim.diagnostic.enable = true
 vim.diagnostic.config({
@@ -46,7 +51,7 @@ vim.diagnostic.config({
 
 -- Clangd
 vim.lsp.config['clangd'] = {
-	cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose' },
+	cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose', '--completion-style=detailed' },
 	filetypes = { 'c', 'cpp' },
 	root_markers = { 'compile_commands.json', '.git', { '.build.sh', 'Makefile' } }
 }
