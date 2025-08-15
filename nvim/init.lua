@@ -48,6 +48,7 @@ vim.diagnostic.config({
 	signs = false,
 	underline = true
 })
+vim.lsp.log.set_level("off")
 
 -- Clangd
 vim.lsp.config['clangd'] = {
