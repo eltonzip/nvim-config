@@ -71,6 +71,7 @@ vim.cmd("Plug 'hrsh7th/cmp-vsnip'")
 vim.cmd("Plug 'hrsh7th/vim-vsnip'")
 vim.cmd("Plug 'nvim-lua/plenary.nvim'")
 vim.cmd("Plug 'nvim-telescope/telescope.nvim'")
+vim.cmd("Plug 'catppuccin/nvim', { 'as': 'catppuccin' }")
 vim.cmd('call plug#end()')
 
 -- Telescope keymaps
@@ -83,7 +84,7 @@ vim.keymap.set('n', '<Leader>ls', ':Telescope lsp_dynamic_workspace_symbols<cr>'
 
 -- Color
 vim.cmd.set('background=dark')
-vim.cmd.colorscheme('desert')
+vim.cmd.colorscheme('catppuccin-macchiato')
 
 -- Vsnip
 vim.cmd("imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'")
