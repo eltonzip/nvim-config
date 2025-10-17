@@ -84,7 +84,7 @@ vim.keymap.set('n', '<Leader>ls', ':Telescope lsp_dynamic_workspace_symbols<cr>'
 
 -- Color
 vim.cmd.set('background=dark')
-vim.cmd.colorscheme('vim')
+vim.cmd.colorscheme('evening')
 
 -- Vsnip
 vim.cmd("imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'")
