@@ -21,24 +21,36 @@ vim.g.localmapleader = '\\'
 vim.keymap.set('n', '-', ':Explore<cr>', { silent = true })
 
 vim.keymap.set('n', '<Leader>ls', ':ls<cr>:b ')
+vim.keymap.set('n', '<Leader>gg', ':grep -r')
+vim.keymap.set('n', '<Leader>ff', ':find ')
 
-vim.keymap.set('n', '<C-j>', ':cnext<cr>')
-vim.keymap.set('n', '<C-k>', ':cprevious<cr>')
 vim.keymap.set('n', '<Leader>co', ':copen<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>cc', ':cclose<cr>', { silent = true })
+vim.keymap.set('n', '<C-j>', ':cnext<cr>')
+vim.keymap.set('n', '<C-k>', ':cprevious<cr>')
 
 vim.keymap.set('n', '<C-p>', 'O<Esc>', { silent = true })
+
+vim.keymap.set('n', '<Leader>mp', ':set makeprg=')
+vim.keymap.set('n', '<Leader>ke', ':make<cr>')
 
 vim.keymap.set('n', '<Leader>ke', ':set keymap=""<cr>')
 vim.keymap.set('n', '<Leader>kr', ':set keymap=russian-jcukenwin<cr>')
 
+vim.keymap.set('n', '<leader>tt', ':tabnew<cr>')
+vim.keymap.set('n', '<leader>1', '1gt')
+vim.keymap.set('n', '<leader>2', '2gt')
+vim.keymap.set('n', '<leader>3', '3gt')
+vim.keymap.set('n', '<leader>4', '4gt')
+vim.keymap.set('n', '<leader>5', '5gt')
+vim.keymap.set('n', '<leader>6', '6gt')
+vim.keymap.set('n', '<leader>7', '7gt')
+vim.keymap.set('n', '<leader>8', '8gt')
+vim.keymap.set('n', '<leader>9', '9gt')
+vim.keymap.set('n', '<leader>0', ':tablast<cr>')
+
 vim.keymap.set('n', '<Leader>le', ':lua vim.diagnostic.open_float()<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>lr', ':lua vim.lsp.buf.rename()<cr>')
-
-vim.keymap.set('n', '<Leader>bB', 'f(r{f)r}')
-vim.keymap.set('n', '<Leader>Bb', 'f{r(f}r)')
-vim.keymap.set('n', '<Leader>qQ', 'f\'r"f\'r"')
-vim.keymap.set('n', '<Leader>Qq', 'f"r\'f"r\'')
 
 -- LSP
 vim.diagnostic.enable = true
@@ -79,8 +91,8 @@ vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<cr>', { silent = true }
 vim.keymap.set('n', '<Leader>fg', ':Telescope live_grep<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>fb', ':Telescope buffers<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>lf', function() require('telescope.builtin').lsp_references({ include_current_line = true }) end, { silent = true })
-vim.keymap.set('n', '<Leader>ld', ':Telescope diagnostics<cr>', { silent = true })
-vim.keymap.set('n', '<Leader>ls', ':Telescope lsp_dynamic_workspace_symbols<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>fd', ':Telescope diagnostics<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>fs', ':Telescope lsp_dynamic_workspace_symbols<cr>', { silent = true })
 
 -- Color
 vim.cmd.set('background=dark')
