@@ -32,7 +32,7 @@ vim.keymap.set('n', '<C-k>', ':cprevious<cr>')
 vim.keymap.set('n', '<C-p>', 'O<Esc>', { silent = true })
 
 vim.keymap.set('n', '<Leader>mp', ':set makeprg=')
-vim.keymap.set('n', '<Leader>ke', ':make<cr>')
+vim.keymap.set('n', '<Leader>mm', ':make<cr>')
 
 vim.keymap.set('n', '<Leader>ke', ':set keymap=""<cr>')
 vim.keymap.set('n', '<Leader>kr', ':set keymap=russian-jcukenwin<cr>')
@@ -47,7 +47,9 @@ vim.keymap.set('n', '<leader>6', '6gt')
 vim.keymap.set('n', '<leader>7', '7gt')
 vim.keymap.set('n', '<leader>8', '8gt')
 vim.keymap.set('n', '<leader>9', '9gt')
-vim.keymap.set('n', '<leader>0', ':tablast<cr>')
+vim.keymap.set('n', '<leader>0', '10gt')
+vim.keymap.set('n', '<leader>!', ':tabfirst<cr>')
+vim.keymap.set('n', '<leader>)', ':tablast<cr>')
 
 vim.keymap.set('n', '<Leader>le', ':lua vim.diagnostic.open_float()<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>lr', ':lua vim.lsp.buf.rename()<cr>')
@@ -96,7 +98,7 @@ vim.keymap.set('n', '<Leader>fs', ':Telescope lsp_dynamic_workspace_symbols<cr>'
 
 -- Color
 vim.cmd.set('background=dark')
-vim.cmd.colorscheme('vim')
+vim.cmd.colorscheme('evening')
 
 -- Vsnip
 vim.cmd("imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'")
